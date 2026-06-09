@@ -1,1 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sil Fios e Cabos — Fios e Cabos Elétricos | Guarulhos/SP</title>
+  <meta name="description" content="Sil Fios e Cabos (Elétrica Danúbio) — Fabricação de fios, cabos e condutores elétricos isolados desde 1968. Atendimento em todo o Brasil. Solicite seu orçamento pelo WhatsApp." />
+  <link rel="canonical" href="/" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    :root { --brand: #1d6fdc; --brand-dark: #0b4ea0; --accent: #f59012; --ink: #1a2433; }
+    body { color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .topbar { background: #0b2545; color: #cfe0f7; font-size: .85rem; padding: .5rem 0; }
+    .topbar a { color: #cfe0f7; text-decoration: none; margin-left: 1rem; }
+    .topbar a:hover { color: #fff; }
+    .nav-link { color: var(--ink) !important; font-weight: 500; }
+    .nav-link:hover, .nav-link.active { color: var(--brand) !important; }
+    .navbar-brand-custom { font-weight: 800; color: var(--brand) !important; letter-spacing: .5px; }
+    .btn-brand { background: var(--brand); color: #fff; border: none; }
+    .btn-brand:hover { background: var(--brand-dark); color: #fff; }
+    .btn-accent { background: var(--accent); color: #fff; border: none; font-weight: 600; }
+    .btn-accent:hover { background: #d97706; color: #fff; }
+    .btn-whatsapp { background: #25D366; color: #fff; border: none; font-weight: 600; }
+    .btn-whatsapp:hover { background: #1ebe5d; color: #fff; }
+    .hero { position: relative; min-height: 600px; display: flex; align-items: center; background-image: linear-gradient(135deg, rgba(11,78,160,.85), rgba(11,37,69,.85)), url(src/assets/hero-cabos.jpg); background-size: cover; background-position: center; color: #fff; padding: 5rem 0; }
+    .hero h1 { font-weight: 800; font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.1; }
+    .hero .accent { color: var(--accent); }
+    .hero-badge { display: inline-flex; align-items: center; gap: .5rem; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); padding: .5rem 1rem; border-radius: 999px; font-size: .9rem; backdrop-filter: blur(8px); margin-bottom: 1.5rem; }
+    .features-strip { background: #fff; border-bottom: 1px solid #eef2f7; padding: 1.5rem 0; }
+    .feature-item { display: flex; align-items: center; gap: .75rem; color: var(--ink); font-weight: 600; }
+    .feature-item i { width: 42px; height: 42px; background: rgba(29,111,220,.1); color: var(--brand); border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.3rem; }
+    .section { padding: 5rem 0; }
+    .section-light { background: #f7faff; }
+    .section-title { font-weight: 800; font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: .75rem; }
+    .section-title .accent { color: var(--brand); }
+    .section-sub { color: #5a6b80; margin-bottom: 3rem; }
+    .why-card { background: #fff; border: 1px solid #eef2f7; border-radius: 14px; padding: 2rem; height: 100%; transition: .25s; text-align: center; }
+    .why-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(11,37,69,.08); border-color: var(--brand); }
+    .why-icon { width: 60px; height: 60px; border-radius: 14px; background: linear-gradient(135deg, var(--brand), var(--brand-dark)); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 1rem; }
+    .category-card { background: #fff; border: 1px solid #e6ecf3; border-radius: 12px; padding: 1rem; height: 100%; display: flex; flex-direction: column; transition: .25s; text-decoration: none; color: var(--ink); }
+    .category-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(11,37,69,.1); border-color: var(--brand); }
+    .category-thumb { aspect-ratio: 1/1; background: #fff; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .category-thumb img { width: 100%; height: 100%; object-fit: contain; }
+    .category-card h6 { font-weight: 700; margin-bottom: .25rem; }
+    .category-card .link { color: var(--brand); font-weight: 600; font-size: .875rem; }
+    .product-card { background: #fff; border: 1px solid #eef2f7; border-radius: 14px; overflow: hidden; height: 100%; transition: .25s; }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(11,37,69,.08); }
+    .product-thumb { aspect-ratio: 1/1; background: #fff; display: flex; align-items: center; justify-content: center; position: relative; padding: 1rem; }
+    .product-thumb img { width: 100%; height: 100%; object-fit: contain; }
+    .product-badge { position: absolute; top: 12px; left: 12px; background: var(--accent); color: #fff; font-size: .75rem; font-weight: 700; padding: .25rem .6rem; border-radius: 6px; }
+    .product-body { padding: 1.25rem; }
+    .brand-tag { font-size: .75rem; color: var(--brand); font-weight: 700; letter-spacing: 1px; }
+    .stats { background: linear-gradient(135deg, var(--brand), var(--brand-dark)); color: #fff; padding: 4rem 0; }
+    .stat-num { font-size: 2.5rem; font-weight: 800; color: var(--accent); }
+    .step-num { width: 50px; height: 50px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 800; font-size: 1.3rem; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .calc-band { background: linear-gradient(135deg, var(--brand), var(--brand-dark)); color: #fff; padding: 4rem 0; }
+    .calc-card { background: #fff; color: var(--ink); border-radius: 14px; padding: 2rem; max-width: 560px; margin: 0 auto; box-shadow: 0 14px 40px rgba(0,0,0,.15); }
+    .brand-chip { background: #fff; border: 1px solid #eef2f7; border-radius: 12px; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: center; height: 70px; }
+    .brand-chip span { font-weight: 800; color: var(--accent); font-size: 1.5rem; letter-spacing: 1px; }
+    .testimonial { background: #fff; border: 1px solid #eef2f7; border-radius: 14px; padding: 1.75rem; height: 100%; }
+    .stars { color: var(--accent); }
+    .cta-band { background: linear-gradient(135deg, var(--brand-dark), #0b2545); color: #fff; padding: 4rem 0; }
+    .footer { background: #0b2545; color: #b8c8de; padding: 3.5rem 0 1.5rem; }
+    .footer h6 { color: #fff; font-weight: 700; margin-bottom: 1rem; }
+    .footer a { color: #b8c8de; text-decoration: none; display: block; padding: .15rem 0; }
+    .footer a:hover { color: #fff; }
+    .footer ul { list-style: none; padding: 0; margin: 0; }
+    .whatsapp-float { position: fixed; bottom: 22px; right: 22px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 8px 20px rgba(0,0,0,.25); z-index: 1000; animation: pulse 2s infinite; }
+    .whatsapp-float:hover { background: #1ebe5d; color: #fff; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.6); } 70% { box-shadow: 0 0 0 16px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+    .info-card { background: #fff; border-radius: 14px; padding: 2rem; border: 1px solid #eef2f7; height: 100%; }
+    .info-card h5 i { color: var(--brand); margin-right: .5rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div><i class="bi bi-clock"></i> Seg a Sex: 08h às 18h</div>
+      <div>
+        <a href="mailto:contato@sil.com.br"><i class="bi bi-envelope"></i> contato@sil.com.br</a>
+        <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2" href="#home">
+        <img src="src/assets/sil-logo.png" alt="Sil Fios e Cabos Elétricos" style="height:48px;width:auto" />
+        <span class="fw-bold" style="font-size:1.1rem;line-height:1.1">
+          Sil Fios e Cabos<br>Elétricos
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Quem Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn-whatsapp px-3" href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-9">
+          <span class="hero-badge"><i class="bi bi-lightning-charge-fill"></i> Fábrica de Fios e Cabos Elétricos</span>
+          <h1 class="mb-4">Fios e Cabos Elétricos <br><span class="accent">Sil — Desde 1968</span></h1>
+          <p class="lead mb-4 mx-auto" style="max-width:720px">
+            Fabricação de fios, cabos e condutores elétricos isolados. Linha completa de cabos
+            flexíveis, rígidos, cordões PP e condutores especiais para indústrias, construtoras e revendas.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <a href="#produtos" class="btn btn-accent btn-lg px-4">
+              Ver Produtos <i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg px-4">
+              <i class="bi bi-whatsapp"></i> Solicitar Orçamento
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features strip -->
+  <section class="features-strip">
+    <div class="container">
+      <div class="row g-3 justify-content-around">
+        <div class="col-6 col-md-3">
+          <div class="feature-item justify-content-center justify-content-md-start">
+            <i class="bi bi-shield-check"></i>
+            <span>Certificação INMETRO</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="feature-item justify-content-center justify-content-md-start">
+            <i class="bi bi-award"></i>
+            <span>Marca SIL</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="feature-item justify-content-center justify-content-md-start">
+            <i class="bi bi-truck"></i>
+            <span>Entrega Brasil</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="feature-item justify-content-center justify-content-md-start">
+            <i class="bi bi-headset"></i>
+            <span>Suporte Técnico</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por que escolher -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Por que escolher a <span class="accent">Sil</span>?</h2>
+        <p class="section-sub">Mais de 57 anos fabricando fios e cabos elétricos com qualidade e tecnologia.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="why-card">
+            <div class="why-icon"><i class="bi bi-patch-check"></i></div>
+            <h5 class="fw-bold">Produtos Certificados</h5>
+            <p class="text-muted mb-0 small">Todos os produtos atendem às normas técnicas brasileiras e possuem certificação INMETRO.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="why-card">
+            <div class="why-icon"><i class="bi bi-box-seam"></i></div>
+            <h5 class="fw-bold">Produção Própria</h5>
+            <p class="text-muted mb-0 small">Fábrica própria em Guarulhos/SP com tecnologia e controle de qualidade em todas as etapas.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="why-card">
+            <div class="why-icon"><i class="bi bi-headset"></i></div>
+            <h5 class="fw-bold">Suporte Técnico</h5>
+            <p class="text-muted mb-0 small">Equipe especializada para auxiliar na escolha do cabo correto para cada projeto.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="why-card">
+            <div class="why-icon"><i class="bi bi-truck"></i></div>
+            <h5 class="fw-bold">Entrega Nacional</h5>
+            <p class="text-muted mb-0 small">Enviamos para todo o Brasil com transportadoras confiáveis e preços competitivos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorias -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Nossas <span class="accent">Categorias</span></h2>
+        <p class="section-sub">Encontre o produto ideal para sua instalação elétrica.</p>
+      </div>
+      <div class="row g-4 row-cols-2 row-cols-md-3 row-cols-lg-5">
+        <div class="col">
+          <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="category-card">
+            <div class="category-thumb"><img src="src/assets/cat-flexiveis.jpg" alt="Cabos Flexíveis" loading="lazy" width="800" height="800" /></div>
+            <h6>Cabos Flexíveis</h6>
+            <span class="link">Ver produtos <i class="bi bi-chevron-right"></i></span>
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="category-card">
+            <div class="category-thumb"><img src="src/assets/cat-rigidos.jpg" alt="Cabos Rígidos" loading="lazy" width="800" height="800" /></div>
+            <h6>Cabos Rígidos</h6>
+            <span class="link">Ver produtos <i class="bi bi-chevron-right"></i></span>
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="category-card">
+            <div class="category-thumb"><img src="src/assets/cat-pp.jpg" alt="Cordões PP" loading="lazy" width="800" height="800" /></div>
+            <h6>Cordões PP</h6>
+            <span class="link">Ver produtos <i class="bi bi-chevron-right"></i></span>
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="category-card">
+            <div class="category-thumb"><img src="src/assets/cat-fios.jpg" alt="Fios" loading="lazy" width="800" height="800" /></div>
+            <h6>Fios</h6>
+            <span class="link">Ver produtos <i class="bi bi-chevron-right"></i></span>
+          </a>
+        </div>
+        <div class="col">
+          <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="category-card">
+            <div class="category-thumb"><img src="src/assets/cat-rede.jpg" alt="Cabos de Rede" loading="lazy" width="800" height="800" /></div>
+            <h6>Cabos de Rede</h6>
+            <span class="link">Ver produtos <i class="bi bi-chevron-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos em Destaque -->
+  <section id="produtos" class="section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Produtos em <span class="accent">Destaque</span></h2>
+        <p class="section-sub">Os produtos mais procurados da marca SIL com certificação INMETRO.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="product-card">
+            <div class="product-thumb">
+              <span class="product-badge">Destaque</span>
+              <img src="src/assets/cat-flexiveis.jpg" alt="Cabo Flexível SIL 1,5mm²" loading="lazy" width="800" height="800" />
+            </div>
+            <div class="product-body">
+              <div class="brand-tag">SIL</div>
+              <h6 class="fw-bold mt-1 mb-2">Cabo Flexível SIL 1,5mm²</h6>
+              <div class="small text-muted mb-3"><strong>Bitola:</strong> 1,5mm² · <strong>Tensão:</strong> 450/750V</div>
+              <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="btn btn-brand btn-sm w-100">Solicitar Orçamento</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="product-card">
+            <div class="product-thumb">
+              <span class="product-badge">Destaque</span>
+              <img src="src/assets/cat-rigidos.jpg" alt="Cabo Flexível SIL 2,5mm²" loading="lazy" width="800" height="800" />
+            </div>
+            <div class="product-body">
+              <div class="brand-tag">SIL</div>
+              <h6 class="fw-bold mt-1 mb-2">Cabo Flexível SIL 2,5mm²</h6>
+              <div class="small text-muted mb-3"><strong>Bitola:</strong> 2,5mm² · <strong>Tensão:</strong> 450/750V</div>
+              <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="btn btn-brand btn-sm w-100">Solicitar Orçamento</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="product-card">
+            <div class="product-thumb">
+              <span class="product-badge">Destaque</span>
+              <img src="src/assets/cat-pp.jpg" alt="Cordão PP SIL 2x1,5mm²" loading="lazy" width="800" height="800" />
+            </div>
+            <div class="product-body">
+              <div class="brand-tag">SIL</div>
+              <h6 class="fw-bold mt-1 mb-2">Cordão PP SIL 2x1,5mm²</h6>
+              <div class="small text-muted mb-3"><strong>Bitola:</strong> 2x1,5mm² · <strong>Tensão:</strong> 300/500V</div>
+              <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="btn btn-brand btn-sm w-100">Solicitar Orçamento</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="product-card">
+            <div class="product-thumb">
+              <span class="product-badge">Destaque</span>
+              <img src="src/assets/cat-fios.jpg" alt="Fio Sólido SIL 1,5mm²" loading="lazy" width="800" height="800" />
+            </div>
+            <div class="product-body">
+              <div class="brand-tag">SIL</div>
+              <h6 class="fw-bold mt-1 mb-2">Fio Sólido SIL 1,5mm²</h6>
+              <div class="small text-muted mb-3"><strong>Bitola:</strong> 1,5mm² · <strong>Tensão:</strong> 450/750V</div>
+              <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="btn btn-brand btn-sm w-100">Solicitar Orçamento</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-6 col-md-3"><div class="stat-num">+57</div><div>Anos de Mercado</div></div>
+        <div class="col-6 col-md-3"><div class="stat-num">+10k</div><div>Clientes Atendidos</div></div>
+        <div class="col-6 col-md-3"><div class="stat-num">100%</div><div>Indústria Nacional</div></div>
+        <div class="col-6 col-md-3"><div class="stat-num">BR</div><div>Atendimento Nacional</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como Funciona -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Como <span class="accent">Funciona</span></h2>
+        <p class="section-sub">Solicitar seu orçamento é simples e rápido.</p>
+      </div>
+      <div class="row g-4 text-center">
+        <div class="col-md-6 col-lg-3">
+          <div class="step-num">1</div>
+          <h5 class="fw-bold">Escolha o Produto</h5>
+          <p class="text-muted small">Veja nossa linha de fios e cabos.</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-num">2</div>
+          <h5 class="fw-bold">Solicite Orçamento</h5>
+          <p class="text-muted small">Fale conosco pelo WhatsApp.</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-num">3</div>
+          <h5 class="fw-bold">Pagamento Flexível</h5>
+          <p class="text-muted small">Pix, boleto, transferência ou cartão.</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-num">4</div>
+          <h5 class="fw-bold">Receba em Casa</h5>
+          <p class="text-muted small">Entrega rápida para todo o Brasil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculadora de Bitola -->
+  <section class="calc-band">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title text-white">Calculadora de <span style="color:var(--accent)">Bitola</span></h2>
+        <p class="mb-0" style="color:#cfe0f7">Descubra a bitola ideal para sua instalação.</p>
+      </div>
+      <div class="calc-card">
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Tipo de Instalação</label>
+          <select class="form-select" id="tipo">
+            <option>Residencial</option>
+            <option>Comercial</option>
+            <option>Industrial</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Potência total (W)</label>
+          <input type="number" class="form-control" id="potencia" placeholder="Ex: 2200" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Distância do quadro (m)</label>
+          <input type="number" class="form-control" id="distancia" placeholder="Ex: 15" />
+        </div>
+        <div id="resultado-box" class="alert alert-primary d-flex justify-content-between align-items-center mb-3" style="display:none !important">
+          <span><strong>Bitola sugerida:</strong> <span id="resultado-val"></span></span>
+          <small class="text-muted" id="resultado-tipo"></small>
+        </div>
+        <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp w-100">
+          <i class="bi bi-whatsapp"></i> Confirmar com um Especialista
+        </a>
+        <p class="small text-muted mt-2 mb-0 text-center">* Resultado indicativo. Consulte um profissional para o dimensionamento final.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marcas -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title">Marcas que <span class="accent">Trabalhamos</span></h2>
+      </div>
+      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3">
+        <div class="col"><div class="brand-chip"><img src="src/assets/brand-sil.png" alt="Sil Fios e Cabos" style="max-height:50px;max-width:100%;object-fit:contain" loading="lazy" /></div></div>
+        <div class="col"><div class="brand-chip"><img src="src/assets/brand-sil.png" alt="Sil Fios e Cabos" style="max-height:50px;max-width:100%;object-fit:contain" loading="lazy" /></div></div>
+        <div class="col"><div class="brand-chip"><img src="src/assets/brand-sil.png" alt="Sil Fios e Cabos" style="max-height:50px;max-width:100%;object-fit:contain" loading="lazy" /></div></div>
+        <div class="col"><div class="brand-chip"><img src="src/assets/brand-sil.png" alt="Sil Fios e Cabos" style="max-height:50px;max-width:100%;object-fit:contain" loading="lazy" /></div></div>
+        <div class="col"><div class="brand-chip"><img src="src/assets/brand-sil.png" alt="Sil Fios e Cabos" style="max-height:50px;max-width:100%;object-fit:contain" loading="lazy" /></div></div>
+        <div class="col"><div class="brand-chip"><img src="src/assets/brand-sil.png" alt="Sil Fios e Cabos" style="max-height:50px;max-width:100%;object-fit:contain" loading="lazy" /></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">O que nossos <span class="accent">clientes</span> dizem</h2>
+        <p class="section-sub">Veja a experiência de quem já comprou conosco.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testimonial">
+            <div class="stars mb-2">★★★★★</div>
+            <p class="mb-3">“Excelente atendimento e produtos de qualidade. Os cabos da SIL são os melhores do mercado. Entrega rápida e preço justo.”</p>
+            <div class="fw-bold">Carlos Silva</div>
+            <small class="text-muted">São Paulo/SP</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial">
+            <div class="stars mb-2">★★★★★</div>
+            <p class="mb-3">“Sempre compro com a SIL. Produtos com certificação INMETRO e atendimento técnico que ajuda a escolher o cabo certo para cada projeto.”</p>
+            <div class="fw-bold">Maria Santos</div>
+            <small class="text-muted">Campinas/SP</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial">
+            <div class="stars mb-2">★★★★★</div>
+            <p class="mb-3">“Fabricante confiável com estoque sempre disponível. O suporte técnico é excelente para nossos projetos elétricos.”</p>
+            <div class="fw-bold">João Oliveira</div>
+            <small class="text-muted">Rio de Janeiro/RJ</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Perguntas <span class="accent">Frequentes</span></h2>
+      </div>
+      <div class="accordion mx-auto" id="faqAcc" style="max-width:820px">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-0">Os produtos possuem certificação INMETRO?</button>
+          </h2>
+          <div id="faq-0" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+            <div class="accordion-body">Sim, todos os fios e cabos da SIL atendem às normas técnicas brasileiras e possuem certificação INMETRO.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1">Vocês entregam em todo o Brasil?</button>
+          </h2>
+          <div id="faq-1" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body">Sim, atendemos todos os estados brasileiros com transportadoras confiáveis.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2">Quais formas de pagamento são aceitas?</button>
+          </h2>
+          <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body">Aceitamos Pix, boleto bancário, transferência e cartão de crédito.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3">Como solicito um orçamento?</button>
+          </h2>
+          <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+            <div class="accordion-body">Basta clicar no botão do WhatsApp em qualquer parte do site e nossa equipe responderá rapidamente.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">Precisa de <span style="color:var(--accent)">Fios e Cabos Elétricos</span>?</h2>
+      <p class="lead mb-4">Solicite seu orçamento agora mesmo pelo WhatsApp e receba atendimento personalizado.</p>
+      <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg px-4">
+        <i class="bi bi-whatsapp"></i> Fale Conosco pelo WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contato" class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4 col-lg-3">
+          <h6><i class="bi bi-lightning-charge-fill"></i> SIL FIOS E CABOS</h6>
+          <p class="small">Fabricação de fios, cabos e condutores elétricos isolados desde 1968. Indústria nacional com sede em Guarulhos/SP.</p>
+          <p class="small mb-0"><strong class="text-white">CNPJ:</strong> 61.310.256/0001-90</p>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6>Links Rápidos</h6>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#sobre">Quem Somos</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6>Produtos</h6>
+          <ul>
+            <li><a href="#produtos">Cabos Flexíveis</a></li>
+            <li><a href="#produtos">Cabos Rígidos</a></li>
+            <li><a href="#produtos">Cordões PP</a></li>
+            <li><a href="#produtos">Fios</a></li>
+            <li><a href="#produtos">Cabos de Rede</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-2">
+          <h6>Políticas</h6>
+          <ul>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Trocas e Devoluções</a></li>
+            <li><a href="#">Política de Envio</a></li>
+            <li><a href="#">Formas de Pagamento</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h6>Contato</h6>
+          <p class="small mb-2"><i class="bi bi-geo-alt"></i> Rua Barão de Penedo, 319<br>Cumbica — Guarulhos/SP<br>CEP 07222-015</p>
+          <p class="small mb-1"><a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i> Atendimento WhatsApp</a></p>
+          <p class="small mb-1"><a href="mailto:contato@sil.com.br"><i class="bi bi-envelope"></i> contato@sil.com.br</a></p>
+          <p class="small mb-0"><i class="bi bi-clock"></i> Seg a Sex: 08h às 18h</p>
+        </div>
+      </div>
+      <hr class="my-4" style="border-color:rgba(255,255,255,.1)" />
+      <div class="text-center small">
+        © 2026 Sil Fios e Cabos — Elétrica Danúbio Indústria e Comércio de Materiais Elétricos Ltda. — Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/message/QAJOFGIO6ILKN1" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function() {
+      var tipo = document.getElementById('tipo');
+      var potencia = document.getElementById('potencia');
+      var distancia = document.getElementById('distancia');
+      var box = document.getElementById('resultado-box');
+      var val = document.getElementById('resultado-val');
+      var tipoLabel = document.getElementById('resultado-tipo');
+
+      function calc() {
+        var p = Number(potencia.value);
+        var d = Number(distancia.value);
+        if (!p || !d) {
+          box.style.display = 'none';
+          return;
+        }
+        var r;
+        if (p <= 1500 && d <= 20) r = '1,5 mm²';
+        else if (p <= 3500 && d <= 30) r = '2,5 mm²';
+        else if (p <= 5500 && d <= 40) r = '4,0 mm²';
+        else if (p <= 7500 && d <= 50) r = '6,0 mm²';
+        else r = '10,0 mm² ou superior';
+        val.textContent = r;
+        tipoLabel.textContent = tipo.value;
+        box.style.display = '';
+        box.className = 'alert alert-primary d-flex justify-content-between align-items-center mb-3';
+      }
+      tipo.addEventListener('change', calc);
+      potencia.addEventListener('input', calc);
+      distancia.addEventListener('input', calc);
+    })();
+  </script>
+</body>
+</html>
 
